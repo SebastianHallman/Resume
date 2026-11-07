@@ -1,0 +1,162 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+% Add this package in the preamble
+\usepackage{multicol}
+\usepackage{parcolumns}
+
+\hypersetup{
+    colorlinks=false,     % set true if you want colored links
+    linkcolor=black,      % choose some color if you want links to stand out
+    urlcolor=black,
+    pdfborder={0 0 0},    % remove the borders around the links
+}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\setlength{\footskip}{5pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Sebastian Hällman} &
+\href{mailto:sebastian_hellman@live.se}{sebastian\_hellman@live.se} \\
+
+Junior Fullstack Developer &
+Norrtälje, Sweden \\
+
+\href{https://sebastianhallman.com}{sebastianhallman.com} &
+\href{https://github.com/SebastianHallman}{github.com/SebastianHallman} \\
+\end{tabular*}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{KTH Royal Institute of Technology}{}{Master's degree in Interactive Media Technology}{2020 -- 2025}
+\resumeSubheading{Stockholms Science and Innovation School}{}{Information and Media Technology}{2017 -- 2020}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{Sebbes Webbyrå}{}{Owner}{June 2020 -- January 2026}
+\resumeItemListStart
+\item\small Founded a web agency providing consulting services; built and maintained WordPress websites for local businesses and managed bookkeeping and invoicing.
+\resumeItemListEnd
+\resumeSubheading{KTH Royal Institute of Technology}{}{Teaching assistant}{January -- February 2023}
+\resumeItemListStart
+\item\small Debugged automated tests, supported students with JavaScript labs, and supervised and graded presentations.
+\resumeItemListEnd
+\resumeSubheading{Stockholms Rehabklinik}{}{IT consultant}{December 2019 -- June 2020}
+\resumeItemListStart
+\item\small Maintained the company's Django booking system; continued this work through Sebbes Webbyrå.
+\resumeItemListEnd
+\resumeSubheading{Norrtälje Municipality}{}{Summer employee, HR department}{Summers 2018 \& 2019}
+\resumeItemListStart
+\item\small Handled administration, followed up and closed recruitment advertisements, and conducted external environment analyses during two consecutive summers.
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{CalmaKit -- Master's thesis, KTH (January -- August 2025)}{Designed an assistive prototype for people with cerebral palsy using a wearable band, Arduino and a mobile app, with an effect similar to weighted blankets. All three test participants reported reduced perceived spasticity. \href{https://www.diva-portal.org/smash/record.jsf?pid=diva2:2037729}{\textnormal{\textcolor{blue}{(source)}}}}
+\resumeSubItem{myMathBook -- Full-stack Web Application}{Built a web application using React, TypeScript and Node.js for writing mathematics digitally. Implemented automatic mathematical expression detection, LaTeX rendering, and tools to solve several math exercises with a focus on user experience.\href{https://mymathbook.sebastianhallman.com/}{\textnormal{\textcolor{blue}{(source)}}}}
+\resumeItemListEnd
+
+\section{Engagement}
+\resumeSubHeadingListStart
+\resumeSubItem{SS Gambit -- Member since 2019}{Club treasurer and board member; previously deputy secretary. Organize online training sessions and compete in Roslagsserien and Division 2 of Allsvenskan.}
+\resumeSubItem{Chess content creation}{Over 10,000 followers across social profiles. Manage streaming, recording, editing, publishing, merchandise and website design. Invited creator at DreamHack Stockholm 2025 and 2026; sold more event tickets than any other creator in 2025. Social profile available upon request.}
+\resumeSubItem{Helpful Pixels -- Charity fundraising (2021 -- Present)}{Stream at gaming charity events, helping raise funds for Musikhjälpen, the Tim Bergling Foundation, AbleGamers, Project Hope, Diabeteskampen, Hjärnfonden and UNICEF.}
+\resumeSubHeadingListEnd
+
+\section{Technical Expertise}
+\begin{parcolumns}[colwidths={1=0.32\textwidth,2=0.32\textwidth,3=0.32\textwidth},rulebetween]{3}
+\colchunk[1]{\textbf{Languages}\par
+\begin{itemize}[leftmargin=*,labelsep=4pt,itemsep=2pt]
+\item JavaScript
+\item TypeScript
+\item HTML \& CSS
+\item Python
+\end{itemize}}
+\colchunk[2]{\textbf{Frameworks \& Platforms}\par
+\begin{itemize}[leftmargin=*,labelsep=4pt,itemsep=2pt]
+\item React
+\item Next.js
+\item Node.js
+\item WordPress
+\end{itemize}}
+\colchunk[3]{\textbf{Development Tools}\par
+\begin{itemize}[leftmargin=*,labelsep=4pt,itemsep=2pt]
+\item Git
+\item Arduino
+\end{itemize}}
+\end{parcolumns}
+\vspace{3pt}
+\small\textbf{Languages:} Swedish, English \hfill \textit{References available upon request.}
+\end{document}
