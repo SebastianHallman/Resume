@@ -2,15 +2,17 @@
 
 LaTeX source for my CV. GitHub Actions compiles the uploaded `resume.tex` as it is, without rewriting its content.
 
+[View or download the latest CV PDF](resume.pdf)
+
 ## Edit and build
 
-Edit `resume.tex` and push your changes. GitHub Actions builds the PDF on every push, pull request, or manual run. No extra secrets are needed.
+Edit `resume.tex` and push your changes. GitHub Actions builds the PDF on every push, pull request, or manual run. After a successful build on `main`, the workflow saves `resume.pdf` in the repository root. No extra secrets are needed.
 
 1. Open [Actions → Build CV PDF](https://github.com/SebastianHallman/Resume/actions/workflows/build-cv.yml).
 2. Select the successful run for your latest commit.
 3. Under **Artifacts**, download **Sebastian-Hallman-CV** and open `resume.pdf` inside the ZIP.
 
-Artifact downloads require signing in to GitHub. Files are retained for 30 days; rerun the workflow to produce a fresh download. This setup does not publish to GitHub Pages, create a release, or commit generated PDFs.
+Artifact downloads require signing in to GitHub. Files are retained for 30 days; rerun the workflow to produce a fresh download. The PDF in the repository remains available after artifacts expire. The PDF commit uses `[skip ci]` to avoid a build loop. Pull requests and other branches only produce an artifact.
 
 For local builds, install a LaTeX distribution with `latexmk` and the packages used by `resume.tex` (on Ubuntu: `latexmk texlive-latex-extra texlive-fonts-recommended`). Then run:
 
@@ -18,7 +20,7 @@ For local builds, install a LaTeX distribution with `latexmk` and the packages u
 latexmk -pdf -interaction=nonstopmode -halt-on-error -file-line-error -outdir=build -pdflatex="pdflatex -no-shell-escape %O %S" resume.tex
 ```
 
-The PDF is written to `build/resume.pdf`. Generated files are ignored by Git.
+The PDF is written to `build/resume.pdf`. Other generated files are ignored by Git; only the root `resume.pdf` is tracked.
 
 ## Privacy
 

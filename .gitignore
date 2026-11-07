@@ -1,6 +1,7 @@
 # LaTeX output
 /build/
 *.pdf
+!/resume.pdf
 *.aux
 *.log
 *.out
