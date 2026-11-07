@@ -1,0 +1,23 @@
+# LaTeX output
+/build/
+*.pdf
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.xdv
+*.dvi
+
+# Local/private copies (keep sensitive files outside the repository)
+private/
+*.private.tex
+*.local.tex
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
